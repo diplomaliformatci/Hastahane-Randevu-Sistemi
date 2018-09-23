@@ -1,24 +1,737 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8zK-h4-kxD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="HastahaneRandevuProgrami" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctor-1" translatesAutoresizingMaskIntoConstraints="NO" id="Onp-9v-75s">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1m-eY-0MW">
+                                <rect key="frame" x="8" y="72" width="359" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Imaginary Hospital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kU1-5N-jeb">
+                                        <rect key="frame" x="109.5" y="24" width="157" height="23.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.49411764705882355" green="0.82745098039215681" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="YWa-gh-WT0"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="vIm-Uk-jho">
+                                <rect key="frame" x="8" y="150" width="359" height="90"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kullanici Adinizi Giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MkF-Ih-AAf">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sifrenizi Giriniz" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tta-H3-06M">
+                                        <rect key="frame" x="0.0" y="30" width="359" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHM-Q7-g6A">
+                                        <rect key="frame" x="0.0" y="60" width="359" height="30"/>
+                                        <color key="backgroundColor" red="0.49411764705882355" green="0.82745098039215681" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Giris Yap"/>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Hk-Qh-9hp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="3nG-kY-bQY"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0uO-ud-5Ek">
+                                <rect key="frame" x="8" y="582" width="359" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uyeliginiz Yok Mu ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xc3-uf-aOK">
+                                        <rect key="frame" x="106" y="0.0" width="147.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsO-1r-QsK">
+                                        <rect key="frame" x="153" y="20.5" width="53" height="49.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Kayit Ol"/>
+                                        <connections>
+                                            <action selector="registerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Sq-Jk-I43"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Nw3-bk-Qdg"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qtR-iH-CAN">
+                                <rect key="frame" x="8" y="248" width="359" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doktor Musunuz ? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aR-9a-sqN">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AiI-mu-ADO">
+                                        <rect key="frame" x="0.0" y="20.5" width="359" height="40.5"/>
+                                        <segments>
+                                            <segment title="Evet"/>
+                                            <segment title="Hayir"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HCu-0Y-SHi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vIm-Uk-jho" secondAttribute="trailing" constant="8" id="8JY-mp-9NN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0uO-ud-5Ek" secondAttribute="bottom" constant="15" id="8R5-7U-L43"/>
+                            <constraint firstItem="y1m-eY-0MW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="8us-BB-wsa"/>
+                            <constraint firstItem="Onp-9v-75s" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Adb-9w-ZAL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qtR-iH-CAN" secondAttribute="trailing" constant="8" id="Cne-71-ANl"/>
+                            <constraint firstAttribute="trailing" secondItem="y1m-eY-0MW" secondAttribute="trailing" constant="8" id="Exu-rh-8BG"/>
+                            <constraint firstItem="vIm-Uk-jho" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="GI7-F0-GVv"/>
+                            <constraint firstItem="Onp-9v-75s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WCh-oK-jPN"/>
+                            <constraint firstItem="0uO-ud-5Ek" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Xzy-k6-2Hr"/>
+                            <constraint firstItem="vIm-Uk-jho" firstAttribute="top" secondItem="y1m-eY-0MW" secondAttribute="bottom" constant="8" id="b1n-AP-iiN"/>
+                            <constraint firstItem="Onp-9v-75s" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="h9z-Ss-EkU"/>
+                            <constraint firstItem="Onp-9v-75s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mxZ-F1-pRl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0uO-ud-5Ek" secondAttribute="trailing" constant="8" id="ssX-gF-dkH"/>
+                            <constraint firstItem="qtR-iH-CAN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="vpN-wD-0dr"/>
+                            <constraint firstItem="qtR-iH-CAN" firstAttribute="top" secondItem="vIm-Uk-jho" secondAttribute="bottom" constant="8" id="wGg-7G-Q7E"/>
+                            <constraint firstItem="y1m-eY-0MW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="zTR-hT-cXU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Log In" id="WEU-Ew-QFT"/>
+                    <connections>
+                        <outlet property="doctorImg" destination="Onp-9v-75s" id="8A0-bH-NQe"/>
+                        <outlet property="passwordTextField" destination="Tta-H3-06M" id="Ar8-Rl-8Va"/>
+                        <outlet property="ruDoctorSegmentedController" destination="AiI-mu-ADO" id="p02-yd-CUb"/>
+                        <outlet property="userNameTextField" destination="MkF-Ih-AAf" id="6Ms-HO-X0Y"/>
+                        <segue destination="vnn-ZC-eCG" kind="show" identifier="userLogeedIn" id="Geo-hZ-dLv"/>
+                        <segue destination="goG-dd-JtV" kind="show" identifier="doctorLoggedIn" id="IYn-ez-ZSa"/>
+                        <segue destination="yeQ-0d-PLU" kind="show" identifier="registerSegue" id="Kjk-OI-dWa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="472.80000000000001" y="164.16791604197903"/>
+        </scene>
+        <!--RegisterVC-->
+        <scene sceneID="I0B-TE-Jre">
+            <objects>
+                <viewController id="yeQ-0d-PLU" customClass="RegisterVC" customModule="HastahaneRandevuProgrami" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2o0-s4-Syi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rNI-YR-XCf">
+                                <rect key="frame" x="20" y="84" width="335" height="401"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C8d-nJ-hTd">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="42"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bdq-ZR-byf">
+                                        <rect key="frame" x="0.0" y="72" width="335" height="41.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pam-Hn-FDB">
+                                        <rect key="frame" x="0.0" y="143.5" width="335" height="42"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fullname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bBA-PA-fau">
+                                        <rect key="frame" x="0.0" y="215.5" width="335" height="42"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Registeration Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hL2-cU-LNz">
+                                        <rect key="frame" x="0.0" y="287.5" width="335" height="41.5"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="registerationTypeTextPressed:" destination="yeQ-0d-PLU" eventType="touchUpInside" id="Xsi-xW-3iK"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9H-B6-nFb">
+                                        <rect key="frame" x="0.0" y="359" width="335" height="42"/>
+                                        <state key="normal" title="Kayit Ol"/>
+                                        <connections>
+                                            <action selector="kayitOlBtnPressed:" destination="yeQ-0d-PLU" eventType="touchUpInside" id="ufP-Oa-xjU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuE-EH-lpb">
+                                <rect key="frame" x="0.0" y="505" width="375" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="1Uw-1p-Ltr"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KZA-8X-Bdz" firstAttribute="trailing" secondItem="rNI-YR-XCf" secondAttribute="trailing" constant="20" id="BZh-h4-aiN"/>
+                            <constraint firstItem="rNI-YR-XCf" firstAttribute="leading" secondItem="KZA-8X-Bdz" secondAttribute="leading" constant="20" id="GF4-os-Yul"/>
+                            <constraint firstItem="AuE-EH-lpb" firstAttribute="trailing" secondItem="KZA-8X-Bdz" secondAttribute="trailing" id="M40-GF-51M"/>
+                            <constraint firstItem="AuE-EH-lpb" firstAttribute="leading" secondItem="KZA-8X-Bdz" secondAttribute="leading" id="aIY-WN-LGM"/>
+                            <constraint firstItem="AuE-EH-lpb" firstAttribute="top" secondItem="rNI-YR-XCf" secondAttribute="bottom" constant="20" id="h3q-Bi-Z7J"/>
+                            <constraint firstItem="rNI-YR-XCf" firstAttribute="top" secondItem="KZA-8X-Bdz" secondAttribute="top" constant="20" id="lF4-ZA-4W4"/>
+                            <constraint firstItem="AuE-EH-lpb" firstAttribute="bottom" secondItem="KZA-8X-Bdz" secondAttribute="bottom" id="zDL-2O-lEl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KZA-8X-Bdz"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="pam-Hn-FDB" id="38J-CY-fwH"/>
+                        <outlet property="fullNameTextField" destination="bBA-PA-fau" id="gel-r9-Ktu"/>
+                        <outlet property="passwordTextField" destination="Bdq-ZR-byf" id="TDF-fk-KIh"/>
+                        <outlet property="registerPickerView" destination="AuE-EH-lpb" id="CNI-uE-kZn"/>
+                        <outlet property="registerTypeTextField" destination="hL2-cU-LNz" id="rf2-bQ-aT3"/>
+                        <outlet property="usernameTextField" destination="C8d-nJ-hTd" id="WBk-hU-u24"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3fK-7S-V8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="163.26836581709148"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xFh-w3-O5i">
+            <objects>
+                <viewController id="goG-dd-JtV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wOI-J8-3sT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0v-Fo-U1h">
+                                <rect key="frame" x="128" y="185" width="119" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Randevu Ac"/>
+                                <connections>
+                                    <segue destination="ojr-cG-QQO" kind="show" id="Sqa-KK-GtR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pu-TU-maZ">
+                                <rect key="frame" x="109" y="445" width="157" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Randevulari Goruntule"/>
+                                <connections>
+                                    <segue destination="2Tt-on-8HL" kind="show" id="S7i-6e-fsT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zst-CX-PTW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAS-cs-RjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472.80000000000001" y="1023.2383808095952"/>
+        </scene>
+        <!--Randevu VerVC-->
+        <scene sceneID="aZT-K5-tF7">
+            <objects>
+                <viewController id="ojr-cG-QQO" customClass="RandevuVerVC" customModule="HastahaneRandevuProgrami" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8WU-gz-ZMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="kzF-yf-NBr">
+                                <rect key="frame" x="8" y="72" width="359" height="587"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="qqQ-C9-CHo">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="274.5"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="546561221.09194005">
+                                            <!--2018-04-27 22:33:41 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="WfM-bl-ok4">
+                                        <rect key="frame" x="0.0" y="274.5" width="359" height="274.5"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="546561221.09194005">
+                                            <!--2018-04-27 22:33:41 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjP-1E-V9L">
+                                        <rect key="frame" x="0.0" y="549" width="359" height="38"/>
+                                        <state key="normal" title="Calisma Saatlerini Onayla"/>
+                                        <connections>
+                                            <action selector="calismaSaatleriniOnaylaBtnPressed:" destination="ojr-cG-QQO" eventType="touchUpInside" id="mkk-k5-6vf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kzF-yf-NBr" firstAttribute="top" secondItem="0uQ-QU-EGj" secondAttribute="top" constant="8" id="7hP-ND-Gyo"/>
+                            <constraint firstItem="kzF-yf-NBr" firstAttribute="leading" secondItem="0uQ-QU-EGj" secondAttribute="leading" constant="8" id="XaZ-su-fBU"/>
+                            <constraint firstItem="0uQ-QU-EGj" firstAttribute="bottom" secondItem="kzF-yf-NBr" secondAttribute="bottom" constant="8" id="d1f-pM-TjN"/>
+                            <constraint firstItem="0uQ-QU-EGj" firstAttribute="trailing" secondItem="kzF-yf-NBr" secondAttribute="trailing" constant="8" id="eBq-eD-lCe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0uQ-QU-EGj"/>
+                    </view>
+                    <connections>
+                        <outlet property="randevuBaslangicDatePicker" destination="qqQ-C9-CHo" id="aed-zL-VU1"/>
+                        <outlet property="randevuBitisDatePicker" destination="WfM-bl-ok4" id="SmA-j2-Qzb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sS6-ZS-r2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1423" y="1023"/>
+        </scene>
+        <!--Doktor Randevu GoruntuleVC-->
+        <scene sceneID="O3B-o0-eGe">
+            <objects>
+                <viewController id="2Tt-on-8HL" customClass="DoktorRandevuGoruntuleVC" customModule="HastahaneRandevuProgrami" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wpa-JL-ET9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ObP-GM-QgY">
+                                <rect key="frame" x="8" y="72" width="359" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="doktorRandevularimCell" rowHeight="107" id="JKJ-wA-auT" customClass="doktorRandevularimCell" customModule="HastahaneRandevuProgrami" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="359" height="107"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JKJ-wA-auT" id="UQ3-lI-IJp">
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="106.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lhs-OE-qP9">
+                                                    <rect key="frame" x="23" y="19" width="313" height="69"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="XYU-lt-ITe">
+                                                            <rect key="frame" x="0.0" y="14" width="156.5" height="41"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randevu Zamani" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pQ-oM-ZTw">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hasta Adi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHs-vo-Enl">
+                                                                    <rect key="frame" x="0.0" y="20.5" width="73.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jg2-ds-xCE">
+                                                            <rect key="frame" x="156.5" y="14" width="156.5" height="41"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17-04-1996" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROH-YD-yLO">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="92" height="20.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="aZH-6d-V3i"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resat Nuri Gultekin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK7-OL-1tB">
+                                                                    <rect key="frame" x="0.0" y="20.5" width="146.5" height="20.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="4Jb-PF-mCL"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lhs-OE-qP9" firstAttribute="leading" secondItem="UQ3-lI-IJp" secondAttribute="leadingMargin" constant="8" id="0KB-kN-juW"/>
+                                                <constraint firstItem="lhs-OE-qP9" firstAttribute="top" secondItem="UQ3-lI-IJp" secondAttribute="topMargin" constant="8" id="HuS-n3-Ody"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lhs-OE-qP9" secondAttribute="trailing" constant="8" id="dDZ-g9-dfD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lhs-OE-qP9" secondAttribute="bottom" constant="8" id="yVC-30-pzL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="patientNameLabel" destination="OK7-OL-1tB" id="7Gy-Cr-GAZ"/>
+                                            <outlet property="randevuDateLabel" destination="ROH-YD-yLO" id="r5r-pM-Y73"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ObP-GM-QgY" firstAttribute="leading" secondItem="AUq-2g-Gg9" secondAttribute="leading" constant="8" id="F8e-uj-Vcd"/>
+                            <constraint firstItem="AUq-2g-Gg9" firstAttribute="trailing" secondItem="ObP-GM-QgY" secondAttribute="trailing" constant="8" id="VWQ-tR-Mbn"/>
+                            <constraint firstItem="AUq-2g-Gg9" firstAttribute="bottom" secondItem="ObP-GM-QgY" secondAttribute="bottom" constant="8" id="bkS-8p-3P2"/>
+                            <constraint firstItem="ObP-GM-QgY" firstAttribute="top" secondItem="AUq-2g-Gg9" secondAttribute="top" constant="8" id="z1f-LO-FQD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AUq-2g-Gg9"/>
+                    </view>
+                    <connections>
+                        <outlet property="randevularTableView" destination="ObP-GM-QgY" id="rpk-jg-Zzz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L20-72-skc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472.80000000000001" y="1800.4497751124438"/>
+        </scene>
+        <!--Patient MainVC-->
+        <scene sceneID="y76-Du-XtD">
+            <objects>
+                <viewController id="vnn-ZC-eCG" customClass="patientMainVC" customModule="HastahaneRandevuProgrami" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rwc-o8-bpV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ov6-ob-Rep">
+                                <rect key="frame" x="108" y="169" width="159" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Randevu Al"/>
+                                <connections>
+                                    <segue destination="84N-fT-OqC" kind="show" identifier="randevuAlSegue" id="Yta-41-0l1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGy-Uq-Je1">
+                                <rect key="frame" x="108" y="307" width="159" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Receteleri Goruntule"/>
+                                <connections>
+                                    <action selector="receteGoruntuleBtnPressed:" destination="vnn-ZC-eCG" eventType="touchUpInside" id="4rv-Kf-dbn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0B6-jt-3cU">
+                                <rect key="frame" x="108" y="446" width="159" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Randevulari Goruntule"/>
+                                <connections>
+                                    <action selector="randevulariGoruntuleBtnPressed:" destination="vnn-ZC-eCG" eventType="touchUpInside" id="Mlj-3U-iU0"/>
+                                    <segue destination="bNC-fh-mjg" kind="show" id="gyN-eC-t7V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGo-oi-Zvz">
+                                <rect key="frame" x="108" y="169" width="159" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Randevu Al"/>
+                                <connections>
+                                    <action selector="randevuAlBtnPressed:" destination="vnn-ZC-eCG" eventType="touchUpInside" id="bRH-xR-dFO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5bg-Tk-Vih"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ko0-ct-yMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1248.8" y="-577.06146926536735"/>
+        </scene>
+        <!--RandevularimVC-->
+        <scene sceneID="mn1-c6-YVt">
+            <objects>
+                <viewController id="bNC-fh-mjg" customClass="RandevularimVC" customModule="HastahaneRandevuProgrami" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i88-vV-7D3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sf7-Xl-Baz">
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="randevularimCell" rowHeight="132" id="aHt-C6-EuC" customClass="randevularimCell" customModule="HastahaneRandevuProgrami" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="132"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aHt-C6-EuC" id="apZ-db-1d8">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="131.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krs-qo-8pz">
+                                                    <rect key="frame" x="31" y="71" width="0.0" height="0.0"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Mh5-TK-YWv">
+                                                    <rect key="frame" x="23" y="19" width="289" height="94"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randevu Zamani" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13V-dF-USS">
+                                                            <rect key="frame" x="0.0" y="0.0" width="144.5" height="94"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17-04" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKx-hi-IBq">
+                                                            <rect key="frame" x="144.5" y="0.0" width="144.5" height="94"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Mh5-TK-YWv" firstAttribute="centerX" secondItem="apZ-db-1d8" secondAttribute="centerX" id="J2u-2c-5VN"/>
+                                                <constraint firstItem="Mh5-TK-YWv" firstAttribute="centerY" secondItem="apZ-db-1d8" secondAttribute="centerY" id="S1X-d4-cNs"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Mh5-TK-YWv" secondAttribute="trailing" constant="8" id="SYC-MY-OqJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Mh5-TK-YWv" secondAttribute="bottom" constant="8" id="WYQ-kW-AOR"/>
+                                                <constraint firstItem="Mh5-TK-YWv" firstAttribute="top" secondItem="apZ-db-1d8" secondAttribute="topMargin" constant="8" id="a2g-bt-V0v"/>
+                                                <constraint firstItem="Mh5-TK-YWv" firstAttribute="leading" secondItem="apZ-db-1d8" secondAttribute="leadingMargin" constant="8" id="u6G-wN-Jb9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="randevuDateLabel" destination="JKx-hi-IBq" id="wMF-dY-QMx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sf7-Xl-Baz" firstAttribute="leading" secondItem="P3Y-qC-3Hf" secondAttribute="leading" constant="20" id="WIB-N0-Zt8"/>
+                            <constraint firstItem="sf7-Xl-Baz" firstAttribute="top" secondItem="P3Y-qC-3Hf" secondAttribute="top" constant="20" id="aOs-XN-1bk"/>
+                            <constraint firstItem="P3Y-qC-3Hf" firstAttribute="trailing" secondItem="sf7-Xl-Baz" secondAttribute="trailing" constant="20" id="jTG-wd-DWf"/>
+                            <constraint firstItem="P3Y-qC-3Hf" firstAttribute="bottom" secondItem="sf7-Xl-Baz" secondAttribute="bottom" constant="20" id="qA9-hN-b7s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P3Y-qC-3Hf"/>
+                    </view>
+                    <connections>
+                        <outlet property="randevularimTableView" destination="sf7-Xl-Baz" id="z9R-Sz-2YS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbj-uO-2ib" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1248.8" y="-1339.8800599700151"/>
+        </scene>
+        <!--Randevu AlVC-->
+        <scene sceneID="XuB-4A-Tkz">
+            <objects>
+                <viewController storyboardIdentifier="randevuAlVC" id="84N-fT-OqC" customClass="RandevuAlVC" customModule="HastahaneRandevuProgrami" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qKU-VK-9Cp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="O6G-WY-Vkj">
+                                <rect key="frame" x="0.0" y="104" width="375" height="563"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hangi Tarihler Arasi Randevu Aramak Istiyorsunuz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9q4-Mm-CqM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="16"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="MWe-41-tOt">
+                                        <rect key="frame" x="0.0" y="16" width="375" height="169"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="546214956.54443705">
+                                            <!--2018-04-23 22:22:36 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="PFi-F9-mgB">
+                                        <rect key="frame" x="0.0" y="185" width="375" height="169.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="546214902.03300595">
+                                            <!--2018-04-23 22:21:42 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hangi Polikinlikten Randevu Almak Istiyorsunuz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAW-0u-SXe">
+                                        <rect key="frame" x="0.0" y="354.5" width="375" height="16"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRq-f7-pdL">
+                                        <rect key="frame" x="0.0" y="370.5" width="375" height="142.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmq-17-5ZI">
+                                        <rect key="frame" x="0.0" y="513" width="375" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="BY4-iV-nnY"/>
+                                        </constraints>
+                                        <state key="normal" title="Arama Yap">
+                                            <color key="titleColor" red="0.4941176471" green="0.82745098039999998" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="aramaYapBtnPressed:" destination="84N-fT-OqC" eventType="touchUpInside" id="fHL-FV-XDZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O6G-WY-Vkj" firstAttribute="top" secondItem="aTq-zg-iXN" secondAttribute="top" constant="40" id="22E-Wd-4d4"/>
+                            <constraint firstAttribute="trailing" secondItem="O6G-WY-Vkj" secondAttribute="trailing" id="MI2-Su-b2Z"/>
+                            <constraint firstItem="O6G-WY-Vkj" firstAttribute="leading" secondItem="aTq-zg-iXN" secondAttribute="leading" id="fKj-BK-aCm"/>
+                            <constraint firstAttribute="bottom" secondItem="O6G-WY-Vkj" secondAttribute="bottom" id="zCj-Dh-czB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aTq-zg-iXN"/>
+                    </view>
+                    <connections>
+                        <outlet property="polikinlikPickerView" destination="cRq-f7-pdL" id="dmj-Kf-XZ1"/>
+                        <outlet property="randevuBaslangicDatePicker" destination="MWe-41-tOt" id="JN8-MB-Md7"/>
+                        <outlet property="randevuBitisDatePicker" destination="PFi-F9-mgB" id="H4m-QS-j3u"/>
+                        <segue destination="wSa-ym-Cg7" kind="show" identifier="AramaYapBtnClicked" id="Fvf-8l-ud3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sc-0q-Khn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2614" y="-577"/>
+        </scene>
+        <!--RandevularVC-->
+        <scene sceneID="ARp-b9-Trd">
+            <objects>
+                <viewController id="wSa-ym-Cg7" customClass="RandevularVC" customModule="HastahaneRandevuProgrami" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vWl-GV-gPl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="46W-Zw-1n9">
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="randevuCell" rowHeight="123" id="UpD-NM-xha" customClass="randevuCell" customModule="HastahaneRandevuProgrami" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="123"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UpD-NM-xha" id="7qO-8x-jZG">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="122.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="BSf-14-dQh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="122.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qgn-98-9eE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="178.5" height="122.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doktorun Adi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oy0-oc-Xeu">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="178.5" height="27"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doktor Resat Nuri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xf-Pa-tG2">
+                                                                    <rect key="frame" x="0.0" y="32" width="178.5" height="27"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randevu Tarihi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fT7-z8-fdY">
+                                                                    <rect key="frame" x="0.0" y="64" width="178.5" height="26.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17-04-1996" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxJ-bl-h9X">
+                                                                    <rect key="frame" x="0.0" y="95.5" width="178.5" height="27"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYJ-04-Wl7">
+                                                            <rect key="frame" x="178.5" y="0.0" width="156.5" height="122.5"/>
+                                                            <state key="normal" title="Randevu Talep Et"/>
+                                                            <connections>
+                                                                <action selector="randevuTakipEtBtnPressed:" destination="wSa-ym-Cg7" eventType="touchUpInside" id="IEi-6F-Jej"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BSf-14-dQh" firstAttribute="leading" secondItem="7qO-8x-jZG" secondAttribute="leading" id="5c7-oC-BXf"/>
+                                                <constraint firstAttribute="bottom" secondItem="BSf-14-dQh" secondAttribute="bottom" id="FeA-XG-Yov"/>
+                                                <constraint firstItem="BSf-14-dQh" firstAttribute="top" secondItem="7qO-8x-jZG" secondAttribute="top" id="h3W-y1-dkK"/>
+                                                <constraint firstAttribute="trailing" secondItem="BSf-14-dQh" secondAttribute="trailing" id="qUq-Me-Xu9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="doktorAdiLabel" destination="0xf-Pa-tG2" id="ey7-n4-RF4"/>
+                                            <outlet property="randevuTarihiLabel" destination="JxJ-bl-h9X" id="K4c-0R-FdV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="46W-Zw-1n9" firstAttribute="leading" secondItem="iVk-Ju-zh0" secondAttribute="leading" constant="20" id="BTj-RA-rQu"/>
+                            <constraint firstItem="46W-Zw-1n9" firstAttribute="top" secondItem="iVk-Ju-zh0" secondAttribute="top" constant="20" id="OPU-4Z-HSl"/>
+                            <constraint firstItem="iVk-Ju-zh0" firstAttribute="bottom" secondItem="46W-Zw-1n9" secondAttribute="bottom" constant="20" id="T00-tb-tAz"/>
+                            <constraint firstItem="iVk-Ju-zh0" firstAttribute="trailing" secondItem="46W-Zw-1n9" secondAttribute="trailing" constant="20" id="i2V-F5-yWu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iVk-Ju-zh0"/>
+                    </view>
+                    <connections>
+                        <outlet property="randevuTableView" destination="46W-Zw-1n9" id="zHM-pJ-63U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jey-Ai-hCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3584.8000000000002" y="-577.06146926536735"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="u21-XI-lKC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8zK-h4-kxD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qjh-LY-6P7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gsc-NL-Ara"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7LQ-uM-Aue" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-452" y="164"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="doctor-1" width="840" height="560"/>
+    </resources>
 </document>

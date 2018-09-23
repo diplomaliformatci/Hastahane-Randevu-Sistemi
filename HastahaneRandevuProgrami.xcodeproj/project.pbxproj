@@ -7,21 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22648A772093DCE500CD30B8 /* RandevuVerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22648A762093DCE500CD30B8 /* RandevuVerVC.swift */; };
+		22648A792094B76400CD30B8 /* randevuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22648A782094B76400CD30B8 /* randevuCell.swift */; };
+		22648A7F2094B89700CD30B8 /* Randevu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22648A7E2094B89700CD30B8 /* Randevu.swift */; };
+		22648A812094B95900CD30B8 /* RandevularVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22648A802094B95900CD30B8 /* RandevularVC.swift */; };
 		226B654C207CDB0D007DD572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226B654B207CDB0D007DD572 /* AppDelegate.swift */; };
-		226B654E207CDB0D007DD572 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226B654D207CDB0D007DD572 /* ViewController.swift */; };
+		226B654E207CDB0D007DD572 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226B654D207CDB0D007DD572 /* LoginController.swift */; };
 		226B6551207CDB0D007DD572 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 226B654F207CDB0D007DD572 /* Main.storyboard */; };
 		226B6553207CDB0D007DD572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 226B6552207CDB0D007DD572 /* Assets.xcassets */; };
 		226B6556207CDB0D007DD572 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 226B6554207CDB0D007DD572 /* LaunchScreen.storyboard */; };
+		228A3F52208BAC22009BC95F /* doctor-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 228A3F4D208BAC21009BC95F /* doctor-1.jpg */; };
+		228A3F53208BAC22009BC95F /* doctor-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 228A3F4E208BAC21009BC95F /* doctor-3.jpg */; };
+		228A3F54208BAC22009BC95F /* doctor-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 228A3F4F208BAC22009BC95F /* doctor-5.jpg */; };
+		228A3F55208BAC22009BC95F /* doctor-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 228A3F50208BAC22009BC95F /* doctor-4.jpg */; };
+		228A3F56208BAC22009BC95F /* doktor-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 228A3F51208BAC22009BC95F /* doktor-2.jpg */; };
+		228A3F58208BE848009BC95F /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228A3F57208BE847009BC95F /* RegisterVC.swift */; };
+		228A3F5A208E9300009BC95F /* patientMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228A3F59208E9300009BC95F /* patientMainVC.swift */; };
+		228A3F5C208E931C009BC95F /* RandevuAlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228A3F5B208E931C009BC95F /* RandevuAlVC.swift */; };
+		22C5C6FC2095477C00AC150C /* RandevularimVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5C6FB2095477C00AC150C /* RandevularimVC.swift */; };
+		22C5C6FE20954EA500AC150C /* randevularimCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5C6FD20954EA500AC150C /* randevularimCell.swift */; };
+		22C5C7002095524600AC150C /* DoktorRandevuGoruntuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5C6FF2095524600AC150C /* DoktorRandevuGoruntuleVC.swift */; };
+		22C5C7022095546000AC150C /* doktorRandevularimCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C5C7012095546000AC150C /* doktorRandevularimCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22648A762093DCE500CD30B8 /* RandevuVerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandevuVerVC.swift; sourceTree = "<group>"; };
+		22648A782094B76400CD30B8 /* randevuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randevuCell.swift; sourceTree = "<group>"; };
+		22648A7E2094B89700CD30B8 /* Randevu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randevu.swift; sourceTree = "<group>"; };
+		22648A802094B95900CD30B8 /* RandevularVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandevularVC.swift; sourceTree = "<group>"; };
 		226B6548207CDB0D007DD572 /* HastahaneRandevuProgrami.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HastahaneRandevuProgrami.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		226B654B207CDB0D007DD572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		226B654D207CDB0D007DD572 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		226B654D207CDB0D007DD572 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		226B6550207CDB0D007DD572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		226B6552207CDB0D007DD572 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		226B6555207CDB0D007DD572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		226B6557207CDB0D007DD572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		228A3F4D208BAC21009BC95F /* doctor-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "doctor-1.jpg"; sourceTree = "<group>"; };
+		228A3F4E208BAC21009BC95F /* doctor-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "doctor-3.jpg"; sourceTree = "<group>"; };
+		228A3F4F208BAC22009BC95F /* doctor-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "doctor-5.jpg"; sourceTree = "<group>"; };
+		228A3F50208BAC22009BC95F /* doctor-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "doctor-4.jpg"; sourceTree = "<group>"; };
+		228A3F51208BAC22009BC95F /* doktor-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "doktor-2.jpg"; sourceTree = "<group>"; };
+		228A3F57208BE847009BC95F /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		228A3F59208E9300009BC95F /* patientMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientMainVC.swift; sourceTree = "<group>"; };
+		228A3F5B208E931C009BC95F /* RandevuAlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandevuAlVC.swift; sourceTree = "<group>"; };
+		22C5C6FB2095477C00AC150C /* RandevularimVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandevularimVC.swift; sourceTree = "<group>"; };
+		22C5C6FD20954EA500AC150C /* randevularimCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randevularimCell.swift; sourceTree = "<group>"; };
+		22C5C6FF2095524600AC150C /* DoktorRandevuGoruntuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoktorRandevuGoruntuleVC.swift; sourceTree = "<group>"; };
+		22C5C7012095546000AC150C /* doktorRandevularimCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doktorRandevularimCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +67,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22648A7A2094B84900CD30B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22648A7E2094B89700CD30B8 /* Randevu.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22648A7B2094B84F00CD30B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22648A782094B76400CD30B8 /* randevuCell.swift */,
+				22C5C6FD20954EA500AC150C /* randevularimCell.swift */,
+				22C5C7012095546000AC150C /* doktorRandevularimCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22648A7C2094B85300CD30B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				226B654D207CDB0D007DD572 /* LoginController.swift */,
+				228A3F57208BE847009BC95F /* RegisterVC.swift */,
+				228A3F59208E9300009BC95F /* patientMainVC.swift */,
+				228A3F5B208E931C009BC95F /* RandevuAlVC.swift */,
+				22648A762093DCE500CD30B8 /* RandevuVerVC.swift */,
+				22648A802094B95900CD30B8 /* RandevularVC.swift */,
+				22C5C6FB2095477C00AC150C /* RandevularimVC.swift */,
+				22C5C6FF2095524600AC150C /* DoktorRandevuGoruntuleVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22648A7D2094B87600CD30B8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				226B654B207CDB0D007DD572 /* AppDelegate.swift */,
+				226B6552207CDB0D007DD572 /* Assets.xcassets */,
+				228A3F4D208BAC21009BC95F /* doctor-1.jpg */,
+				228A3F4E208BAC21009BC95F /* doctor-3.jpg */,
+				228A3F50208BAC22009BC95F /* doctor-4.jpg */,
+				228A3F4F208BAC22009BC95F /* doctor-5.jpg */,
+				228A3F51208BAC22009BC95F /* doktor-2.jpg */,
+				226B6554207CDB0D007DD572 /* LaunchScreen.storyboard */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		226B653F207CDB0D007DD572 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +134,12 @@
 		226B654A207CDB0D007DD572 /* HastahaneRandevuProgrami */ = {
 			isa = PBXGroup;
 			children = (
-				226B654B207CDB0D007DD572 /* AppDelegate.swift */,
-				226B654D207CDB0D007DD572 /* ViewController.swift */,
-				226B654F207CDB0D007DD572 /* Main.storyboard */,
-				226B6552207CDB0D007DD572 /* Assets.xcassets */,
-				226B6554207CDB0D007DD572 /* LaunchScreen.storyboard */,
 				226B6557207CDB0D007DD572 /* Info.plist */,
+				22648A7D2094B87600CD30B8 /* Util */,
+				22648A7C2094B85300CD30B8 /* Controller */,
+				22648A7B2094B84F00CD30B8 /* View */,
+				22648A7A2094B84900CD30B8 /* Model */,
+				226B654F207CDB0D007DD572 /* Main.storyboard */,
 			);
 			path = HastahaneRandevuProgrami;
 			sourceTree = "<group>";
@@ -123,7 +203,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228A3F54208BAC22009BC95F /* doctor-5.jpg in Resources */,
+				228A3F52208BAC22009BC95F /* doctor-1.jpg in Resources */,
+				228A3F53208BAC22009BC95F /* doctor-3.jpg in Resources */,
+				228A3F55208BAC22009BC95F /* doctor-4.jpg in Resources */,
 				226B6556207CDB0D007DD572 /* LaunchScreen.storyboard in Resources */,
+				228A3F56208BAC22009BC95F /* doktor-2.jpg in Resources */,
 				226B6553207CDB0D007DD572 /* Assets.xcassets in Resources */,
 				226B6551207CDB0D007DD572 /* Main.storyboard in Resources */,
 			);
@@ -136,8 +221,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				226B654E207CDB0D007DD572 /* ViewController.swift in Sources */,
+				228A3F58208BE848009BC95F /* RegisterVC.swift in Sources */,
+				22648A812094B95900CD30B8 /* RandevularVC.swift in Sources */,
+				22648A792094B76400CD30B8 /* randevuCell.swift in Sources */,
+				228A3F5A208E9300009BC95F /* patientMainVC.swift in Sources */,
+				22648A772093DCE500CD30B8 /* RandevuVerVC.swift in Sources */,
+				226B654E207CDB0D007DD572 /* LoginController.swift in Sources */,
+				22C5C6FE20954EA500AC150C /* randevularimCell.swift in Sources */,
+				22C5C6FC2095477C00AC150C /* RandevularimVC.swift in Sources */,
+				22648A7F2094B89700CD30B8 /* Randevu.swift in Sources */,
 				226B654C207CDB0D007DD572 /* AppDelegate.swift in Sources */,
+				228A3F5C208E931C009BC95F /* RandevuAlVC.swift in Sources */,
+				22C5C7002095524600AC150C /* DoktorRandevuGoruntuleVC.swift in Sources */,
+				22C5C7022095546000AC150C /* doktorRandevularimCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
